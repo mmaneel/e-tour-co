@@ -6,24 +6,24 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 function ListUsers() {
     const data = [
         { id: 1,profil:<AccountCircleOutlinedIcon sx={{width:'40px',height:'40px'}}/>,
-         name: 'Item 1' ,date: '23-09-2023',icon:<DeleteIcon/> },
+         name: 'UserName' ,date: '23-09-2023',icon:<DeleteIcon/> },
         { id: 2,profil:<AccountCircleOutlinedIcon sx={{width:'40px',height:'40px'}}/>,
-         name: 'Item 2' ,date: '03-08-2023',icon:<DeleteIcon/> },
+         name: 'UserName' ,date: '03-08-2023',icon:<DeleteIcon/> },
         { id: 3,profil:<AccountCircleOutlinedIcon sx={{width:'40px',height:'40px'}}/>,
-         name: 'Item 3' ,date: '25-08-2023',icon:<DeleteIcon/>},
+         name: 'UserName' ,date: '25-08-2023',icon:<DeleteIcon/>},
         { id: 4,profil:<AccountCircleOutlinedIcon sx={{width:'40px',height:'40px'}}/>,
-         name: 'Item 4' ,date: '01-05-2023',icon:<DeleteIcon/>},
+         name: 'UserName' ,date: '01-05-2023',icon:<DeleteIcon/>},
          { id: 5,profil:<AccountCircleOutlinedIcon sx={{width:'40px',height:'40px'}}/>,
-         name: 'Item 4' ,date: '01-05-2023',icon:<DeleteIcon/>},
+         name: 'UserName' ,date: '01-05-2023',icon:<DeleteIcon/>},
          { id: 6,profil:<AccountCircleOutlinedIcon sx={{width:'40px',height:'40px'}}/>,
-         name: 'Item 4' ,date: '01-05-2023',icon:<DeleteIcon/>},
+         name: 'UserName' ,date: '01-05-2023',icon:<DeleteIcon/>},
          
         
       ];
       const myList = data.map((item) => (
         <li className='ul-user1' key={item.id}> 
         <p className='li-user1'>{item.profil}</p>
-        <p className='li-user1 n'>{item.name}<span>mmm</span></p>
+        <p className='li-user1 n'>{item.name}</p>
         <p className='li-user1'>{item.date}</p>
         <p className='li-user1'>{item.icon}</p>
          </li>

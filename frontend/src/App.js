@@ -16,6 +16,7 @@ import Dashboard from './containers/admin/Dashboard';
 import Lieu from './containers/PageLieux/page_lieu'
 import Main from './containers/Main';
 import Search from './containers/Search'
+import Statistic from './containers/admin/Statistic';
 
 function App() {
   const [favorites, setFavorites] = useState([]);
@@ -45,6 +46,7 @@ function App() {
         <Route path="/Lieu/:id" element={<Lieu/>} />
         <Route path="/" element={<Main/>} />
         <Route path="/search" element={<Search/>} />
+        <Route path="/Statistic" element={<Statistic/>} />
        
       
      
