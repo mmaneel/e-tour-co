@@ -34,14 +34,11 @@ function Favoris({favoris}) {
   
   
     const tab=[
-        {id:1,nom:'Plage',region:'Oran',star:'3.5'},
-        {id:2,nom:'Bhar',region:'Alger',star:'4.5'},
-        {id:3,nom:'Plage',region:'tizi',star:'4.5'},
-        {id:4,nom:'Bhar',region:'Oran',star:'4.5'},
-        {id:5,nom:'Plage',region:'Oran',star:'4.5'},
-        {id:6,nom:'Bhar',region:'Oran',star:'4.5'},
-        {id:7,nom:'Plage',region:'Oran',star:'4.5'},
-        {id:8,nom:'Bhar',region:'Oran',star:'4.5'},
+        {id:1,nom:'Plage',region:'Oran',star:'3.5', photo:'./Rectangle 18.png'},
+        {id:2,nom:'Bhar',region:'Alger',star:'4.5', photo:'./Rectangle 19.png'},
+        {id:3,nom:'Plage',region:'tizi',star:'4.5', photo:'./Rectangle 20.png'},
+        {id:4,nom:'Bhar',region:'Oran',star:'4.5', photo:'./Rectangle 21.png'},
+        
     ]
     
   return (
@@ -50,14 +47,14 @@ function Favoris({favoris}) {
     <NavBar/>
     <img className='ligne-pic' src='./ligne.png' alt="photo"/>
     
-        <h1 
+        <p
         style={{ color: '#162641' , textAlign:'center',
-        marginBottom:'70px',marginTop:'0px',paddingTop:'0px'}}>Mes Favoris</h1>
+        marginBottom:'70px',marginTop:'0px',paddingTop:'0px',fontSize:"45px",fontWeight:'bold'}}>Mes Favoris</p>
         
     
-    {favoris.map((e)=>(
+    {tab.map((e)=>(
       <div className='lieu-form-fav'  key={e.id}>
-        <img src='./mosq.jpg' alt="photo"/>
+        <img src={e.photo} alt="photo"/>
         <div className='lieu-form-R-fav'>
             <div className='lieu-name-fav'>
                  <h3>{e.nom}</h3>

@@ -43,7 +43,7 @@ const determineRedirectUrl = async () => {
     if (userRole === 'admin') {
       return '/Dashboard';
     } else {
-      return '/LieuDv';
+      return '/Search';
     }
   } catch (error) {
     // Handle error

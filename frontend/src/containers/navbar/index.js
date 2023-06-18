@@ -96,7 +96,7 @@ const NavBar = () => {
 				    </>}
          </>: <></> }
     <div className='font-jost w-full bg-blueGray flex flex-row justify-between text-black text-lg px-20 py-6'>
-      <img className='w-8' src='/logoZD.svg' alt='Logo' />
+      <Link to='/'><img className='w-8' src='/logoZD.svg' alt='Logo' /></Link>
 
       <input
         type='checkbox'

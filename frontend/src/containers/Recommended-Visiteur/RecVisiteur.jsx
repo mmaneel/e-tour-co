@@ -9,22 +9,19 @@ import StarIcon from '@mui/icons-material/Star';
 
 function RecVisiteur() {
   const tab=[
-    {id:1,nom:'Plage',region:'Oran',star:'3.5',color:'#C1DCAB'},
-    {id:2,nom:'Bhar',region:'Alger',star:'4.5',color:'#88AFDE'},
-    {id:3,nom:'Plage',region:'tizi',star:'4.5',color:'#F7A832'},
-    {id:4,nom:'Bhar',region:'Oran',star:'4.5',color:'#C1DCAB'},
-    {id:5,nom:'Bhar',region:'Oran',star:'4.5',color:'#C1DCAB'},
-    {id:6,nom:'Bhar',region:'Oran',star:'4.5',color:'#C1DCAB'},
-    {id:7,nom:'Bhar',region:'Oran',star:'4.5',color:'#C1DCAB'},
-    {id:8,nom:'Bhar',region:'Oran',star:'4.5',color:'#C1DCAB'},
-    {id:8,nom:'Bhar',region:'Oran',star:'4.5',color:'#C1DCAB'},]
+    {id:1,nom:'Lac Tonga',region:'El Taref',star:'3.5',color:'#C1DCAB',photo:'./Rectangle 21.png'},
+    {id:4,nom:'Musé des beaux arts',region:'Alger',star:'4.5',color:'#C1DCAB',photo:'./Rectangle 20.png'},
+    {id:3,nom:'Grande Mosquée',region:'Alger',star:'4.5',color:'#F7A832',photo:'./Rectangle 19.png'},
+    {id:4,nom:'Musé des beaux arts',region:'Alger',star:'4.5',color:'#C1DCAB',photo:'./Rectangle 20.png'},
+    {id:1,nom:'Lac Tonga',region:'El Taref',star:'3.5',color:'#C1DCAB',photo:'./Rectangle 21.png'},
+    ]
   return (
     <div>
       
   <div className='container-lieuDV'>
        {tab.map((e)=>(
         <div className='lieu-form'>
-        <img src='./mosq.jpg' alt="photo"/>
+        <img src={e.photo} alt="photo"/>
     <div className='lieu-name'>
       <h3>{e.nom}</h3>
       <span className="region-name">{e.region}</span>

@@ -9,22 +9,37 @@
 .container-List-users .titre-li{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 400px;
     margin-left: 27%;
-   
+   margin-top: 50px;
+   margin-bottom: 50px;
+   font-weight: bold;
+   font-size: 18px;
+  
 }
+.container-List-users .titre-li .h-name1{
+    margin-right: 0%;
+    padding-left: 6%;
+
+  
+}
+.container-List-users .titre-li .h-name{
+   padding-left: 5%;
+
+  
+}
+
+
 .container-List-users .ul-user1{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 700px;
-   
+    margin-left: 10%;
+    margin-top: 2%;
     
-}
-.container-List-users .li-user1{
    
-    border: saddlebrown solid 1px;
     
 }

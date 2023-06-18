@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function LieuDv({ addToFavorites }) {
   const [lieux,setLieux] =useState( [
-    { id: 1, nom: 'Lieu 1', favori: false, region: 'Lieu', color: '#C1DCAB' },
+    { id: 1, nom: 'Lieu 1', favori: false, region: 'Lieu', color: '#C1DCAB', photo:'./Rectangle 18.png' },
     { id: 2, nom: 'Lieu 2', favori: false, region: 'Lieu', color: '#88AFDE' },
     { id: 3, nom: 'Lieu 3', favori: false, region: 'Lieu', color: '#F7A832' },
   ]);

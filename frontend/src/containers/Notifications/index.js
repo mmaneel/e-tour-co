@@ -11,9 +11,8 @@ const Notifications = (props) => {
                 <p className='font-bold text-xl font-jost'>Mes notifications</p>
            </div>
            <div className='overflow-scroll'>
-             <NotifComponent></NotifComponent>
-             <NotifComponent></NotifComponent>
-             <NotifComponent></NotifComponent>
+             <NotifComponent />
+            
              
            </div>
          </div>

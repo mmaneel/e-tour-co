@@ -9,7 +9,7 @@
     outline: none;
     border-top-left-radius:45px ;
     border-top-right-radius:45px ;
-    height: 50px;
+    height: 40px;
     font-size: 20px;
     color: #635D5D;
   
@@ -19,7 +19,7 @@
   .rec-list .active-tabs  {
     background: #FEFDF7;
     border-bottom: 1px solid transparent;
-    box-shadow:rgba(0, 0, 0, 0.1) 13px 0px 20px;
+    box-shadow:rgba(0, 0, 0, 0.1) 1px -19px 20px;
     font-weight:900;
     color: #162641;
     
