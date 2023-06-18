@@ -75,6 +75,7 @@ const handleSubmit = (e) => {
         if (error.response && error.response.status === 401) {
           setError('Invalid username or password.');
           alert('login error');
+          console.log(formValues)
         } else {
           setError('An error occurred. Please try again later.');
         }

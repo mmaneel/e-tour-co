@@ -15,11 +15,11 @@ function ZdestinationList() {
         <img src='./logoAdmin.png' alt='logoAdmin' />
         <div className='ul-ZD'>
         <div className='li-ZD li-ZD-activate'><GroupIcon sx={{ paddingRight:'7px'}}/><Link to ='/Dashboard'>Utilisateurs</Link></div>
-        <div className='li-ZD'><LocationOnIcon  sx={{ paddingRight:'7px'}}/>Lieux</div>
-        <div className='li-ZD'><EventIcon sx={{ paddingRight:'7px'}}/>Evènements</div>
+        <div className='li-ZD'><LocationOnIcon  sx={{ paddingRight:'7px'}}/><Link to='/Search'>Lieux</Link></div>
+        <div className='li-ZD'><EventIcon sx={{ paddingRight:'7px'}}/><Link to='/Event'>Evènements</Link></div>
         <div className='li-ZD'><EqualizerIcon sx={{ paddingRight:'7px'}}/><Link to ='/Statistic'>Statistiques</Link></div>
         <div className='li-ZD'><KeyboardReturnIcon sx={{ paddingRight:'7px'}}/>Retour</div>
-        <div className='li-ZD'><LogoutIcon sx={{ paddingRight:'7px'}}/>Se déconnecter</div>
+        <div className='li-ZD'><LogoutIcon sx={{ paddingRight:'7px'}}/><Link to='/'>Se déconnecter</Link></div>
         </div>
         </div>
          

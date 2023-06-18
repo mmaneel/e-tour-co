@@ -15,58 +15,50 @@ import Map, {
 import mapboxgl from 'mapbox-gl';
 import NavBar from '../navbar'
 import { useEffect } from 'react';
+import monuments from '../../monuments.json';
 import { useMemo } from 'react';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
+import Nav from '../Nav';
 
 function Search() {
   const [theme, setTheme]=useState(null);
   const [category, setCategory]=useState(null);
   const [popupInfo, setPopupInfo] = useState(null);
-  const [monuments, setMonuments]=useState([]);
   const [shownMonuments, setShownMonuments]=useState(monuments);
-  
+  const [searchClicked, setSearchClicked] = useState(false);
 
   useEffect(() => {
-    // Filter the monuments based on theme and category
-    const filteredMonuments = monuments.filter((monument) => {
-      if (theme && monument.theme !== theme) {
-        return false;
-      }
-      if (category && monument.category !== category) {
-        return false;
-      }
-      return true;
-    });
-    setShownMonuments(filteredMonuments);
-  }, [theme, category]);
+    if (searchClicked) {
+      // Filter the monuments based on theme and category
+      const filteredMonuments = monuments.filter((monument) => {
+        if (theme && monument.theme !== theme) {
+          return false;
+        }
+        if (category && monument.category !== category) {
+          return false;
+        }
+        return true;
+      });
+      setShownMonuments(filteredMonuments);
+      setSearchClicked(false); // Réinitialiser l'état searchClicked
+    }
+  }, [searchClicked, theme, category]);
 
+  const handleSearchClick = () => {
+    setSearchClicked(true);
+  };
   const handleThemeChange =(event)=>{
     setTheme(event.target.value)
   }
   const handleCategoryChange =(event)=>{
     setCategory(event.target.value)
 }
-const [Lieux, setLieux] = useState([])
-
-const fetchannonces = async () => {
-  const events = await axios.get('http://127.0.0.1:8000/api/lieux/');
-     
-      console.log(events.data)
-      setMonuments(events.data)
-     
-
-
-  }
-
-  useEffect(() => {
-      fetchannonces();
-  }, [])
-
-  const pins = useMemo(
-    () =>
-      monuments.map((monument) => (
-        <Marker
-          key={monument.id}
+  
+const pins = useMemo(
+  () =>
+    shownMonuments.map((monument, index) => (
+      <Marker
+        key={`marker-${index}`}
         longitude={monument.longitude}
         latitude={monument.latitude}
         anchor="bottom"
@@ -96,7 +88,7 @@ const fetchannonces = async () => {
 
   return (
     <div  className='h-screen relative w-full flex flex-col'>
-      <NavBar/>
+      <Nav/>
       <div className='w-full h-full relative flex flex-col justify-center items-start'>
                
                  <ReactMapGL
@@ -109,7 +101,7 @@ const fetchannonces = async () => {
                           zoom: 11.5,
                         }}
                    >
-                      <div className='absolute top-6 z-20 px-4 py-2 rounded-r-xl bg-white flex flex-row justify-between items-center w-2/3 h-16 gap-3'>
+                      <div className='absolute top-6 z-10 px-4 py-2 rounded-r-xl bg-white flex flex-row justify-between items-center w-[60%] h-16 gap-3'>
                          <div className='w-2/4 h-full '><Geocoder/></div>
                          <div className='flex flex-row justify-between items-center w-full h-full gap-3'>
                             <div className='border-l border-bgshadow h-full'></div>
@@ -141,7 +133,7 @@ const fetchannonces = async () => {
                             <div className='border-l border-bgshadow h-full'></div>
                             <div className='h-full w-full flex flex-col items-center justify-center '>
                               <div className='h-2/3 w-full flex flex-row items-center justify-center'>
-                                <button className=' bg-orange rounded-2xl px-6 text-base font-medium'>Rechercher</button>
+                                <button className=' bg-orange rounded-2xl px-6 text-base font-medium' onClick={handleSearchClick}>Rechercher</button>
                               </div>
                             </div>
                         </div>
@@ -163,7 +155,9 @@ const fetchannonces = async () => {
                               target="_new"
                               href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${popupInfo.site}`}
                             >
-                              Wikipedia
+                              <Link to={`Lieu/${popupInfo.id}`}>
+                             Plus d'information
+                              </Link>
                             </a>
                           </div>
                           <img width="100%" src={popupInfo.image} />

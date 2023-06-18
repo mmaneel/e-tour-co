@@ -9,7 +9,7 @@ const DropDown = ({options,style,element}) => {
     setShowOptions(!showOptions);
   }
   const handleOnClick = ()=>{
-    navigate("/main");
+    navigate("/");
   }
     return (
         <div className="relative inline-block text-left">

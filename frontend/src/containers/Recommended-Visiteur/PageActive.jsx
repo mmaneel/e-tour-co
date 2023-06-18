@@ -5,6 +5,7 @@ import "./PageActive.css"
 import { Link } from 'react-router-dom';
 import Favoris from '../Favoris/Favoris';
 import NavBar from '../navbar';
+import Nav from '../Nav';
 
 function PageActive() {
   const [favoris, setFavoris] = useState([]);
@@ -20,7 +21,7 @@ function PageActive() {
   return (
     <>
      <div className='rec-list'>
-     <NavBar/>
+     <Nav/>
         <div className='rec-listt'>
         <button 
   className={toggleState === 1 ? "tabs active-tabs" : "tabs"} 

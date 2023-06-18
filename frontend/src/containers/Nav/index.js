@@ -7,7 +7,7 @@ import Register from '../AUth/Register.jsx'
 import { Link } from 'react-router-dom';
 import Notifications from '../Notifications/index.js';
 
-const NavBar = () => {
+const Nav = () => {
   const windowSize = useWindowSize();
   const scrollPosition = useScrollPosition();
   const menuToggleRef = useRef(null);
@@ -44,10 +44,10 @@ const NavBar = () => {
     }
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);// For the dropDown
-  const options =[ {name:'Favoris', link:'/main'}]// What to include in the dropdown
+  const options =[ {name:'Favoris', link:'/'}]// What to include in the dropdown
     
 
-  const[logged,setLogged]=useState(false)// Pour changer l'apparence du navBar lorsqu'un utilisateur se connecte à son compte
+  const[logged,setLogged]=useState(true)// Pour changer l'apparence du navBar lorsqu'un utilisateur se connecte à son compte
 
   useEffect(() => {
     const toggleElement = menuToggleRef.current;
@@ -178,4 +178,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Nav;

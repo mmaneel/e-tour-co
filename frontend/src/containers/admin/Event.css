@@ -1,0 +1,12 @@
+.container-Event{
+    
+    display: flex;
+    flex-direction: row;
+    background-color: #FEFDF7;
+}
+.container-Event img{
+    width: 730px;
+    height: 650px;
+    margin-left: 25%;
+    
+}

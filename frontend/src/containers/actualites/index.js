@@ -93,34 +93,34 @@ const Actualites = () => {
 						{/* {speakers.map((speaker, index) => ( */}
 							<SwiperSlide key={1}>
 								{({ isActive }) => (
-									<SpeakersCard active={isActive} name='df' image='/logo192.png' description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. "/>
+									<SpeakersCard  link='/PageActive'active={isActive} name='Journée d’independance' image='/B.png' description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. "/>
 								)}
 							</SwiperSlide>
                             <SwiperSlide key={2}>
 								{({ isActive }) => (
-									<SpeakersCard active={isActive} name='df' image='/logo192.png' description="sfsdf"/>
+									<SpeakersCard link='/PageActive' active={isActive} name='Festival d’ornithologie' image='/A.png' description="Un grand festival dans lequel se rejoint les plus grands enthusiastses d’ornithologie pour observer les especes d’oiseaux rares au Lac Tonga."/>
 								)}
 							</SwiperSlide>
                             <SwiperSlide key={3}>
 								{({ isActive }) => (
-									<SpeakersCard active={isActive} name='df' image='/logo192.png' description="sfsdf"/>
+									<SpeakersCard link='/PageActive' active={isActive} name='Exposition temporelle' image='/C.png' description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."/>
 								)}
 							</SwiperSlide>
                             <SwiperSlide key={4}>
 								{({ isActive }) => (
-									<SpeakersCard active={isActive} name='df' image='/logo192.png' description="sfsdf"/>
+									<SpeakersCard link='/PageActive' active={isActive} name='Exposition temporelle' image='/C.png' description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."/>
 								)}
 							</SwiperSlide>
 							
                             <SwiperSlide key={5}>
 								{({ isActive }) => (
-									<SpeakersCard active={isActive} name='df' image='/logo192.png' description="sfsdf"/>
+									<SpeakersCard link='/PageActive' active={isActive} name='Journée d’independance' image='/A.png' description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."/>
 								)}
 							</SwiperSlide>
 							
                             <SwiperSlide key={6}>
 								{({ isActive }) => (
-									<SpeakersCard active={isActive} name='df' image='/logo192.png' description="sfsdf"/>
+									<SpeakersCard link='/PageActive'  active={isActive} name='Journée d’independance' image='/B.png' description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."/>
 								)}
 							</SwiperSlide>
 						{/* ))} */}
@@ -186,22 +186,22 @@ const Actualites = () => {
 						{/* {speakers.map((speaker, index) => ( */}
 							<SwiperSlide key={1}>
 								{({ isActive }) => (
-									<SpeakersCard active={isActive} name='df' image='/logo192.png' description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. "/>
+									<SpeakersCard link='/Search/Lieu/1 ' active={isActive} name='Makam El Chahid' image='/II.png' description="Alger"/>
 								)}
 							</SwiperSlide>
                             <SwiperSlide key={2}>
 								{({ isActive }) => (
-									<SpeakersCard active={isActive} name='df' image='/logo192.png' description="sfsdf"/>
+									<SpeakersCard active={isActive} name='La Grande mosquée ' image='/YY.png' description="Alger"/>
 								)}
 							</SwiperSlide>
                             <SwiperSlide key={3}>
 								{({ isActive }) => (
-									<SpeakersCard active={isActive} name='df' image='/logo192.png' description="sfsdf"/>
+									<SpeakersCard active={isActive} name='Lac Tonga' image='/WW.png' description="El Taref"/>
 								)}
 							</SwiperSlide>
                             <SwiperSlide key={4}>
 								{({ isActive }) => (
-									<SpeakersCard active={isActive} name='df' image='/logo192.png' description="sfsdf"/>
+									<SpeakersCard active={isActive} name='Lac Tonga' image='/WW.png' description="El Taref"/>
 								)}
 							</SwiperSlide>
 						{/* ))} */}

@@ -3,6 +3,7 @@ import StarIcon from '@mui/icons-material/Star';
 import"./Favoris.css"
 import { Link } from 'react-router-dom';
 import NavBar from '../navbar';
+import Nav from '../Nav';
 function Favoris({favoris}) {
   const [lieux,setLieux] =useState( [
     { id: 1, nom: 'Lieu 1', favori: false, region: 'Lieu', color: '#C1DCAB' },
@@ -34,17 +35,17 @@ function Favoris({favoris}) {
   
   
     const tab=[
-        {id:1,nom:'Plage',region:'Oran',star:'3.5', photo:'./Rectangle 18.png'},
-        {id:2,nom:'Bhar',region:'Alger',star:'4.5', photo:'./Rectangle 19.png'},
-        {id:3,nom:'Plage',region:'tizi',star:'4.5', photo:'./Rectangle 20.png'},
-        {id:4,nom:'Bhar',region:'Oran',star:'4.5', photo:'./Rectangle 21.png'},
+        {id:1,nom:'Makam El Chahid',region:'Alger',star:'3.5', photo:'./MMM.png'},
+        {id:2,nom:'La Grande mosquée',region:'Alger',star:'4.5', photo:'./Rectangle 19.png'},
+        {id:3,nom:'Musé des beaux arts',region:'Alger',star:'4.5', photo:'./Rectangle 20.png'},
+        {id:4,nom:'Lac Tonga',region:'Taref',star:'4.5', photo:'./Rectangle 21.png'},
         
     ]
     
   return (
     <>
     <div className='container-fav'>
-    <NavBar/>
+    <Nav/>
     <img className='ligne-pic' src='./ligne.png' alt="photo"/>
     
         <p
@@ -78,7 +79,7 @@ function Favoris({favoris}) {
                  </p>
               
                 </div>
-                <button className='btn-show-detl'><Link  style={{textDecoration:"none" ,color:"#c3c3c3"}}to ="/LieuDv">plus de détails ...</Link></button>
+                
                 </div>
        
       </div>))}

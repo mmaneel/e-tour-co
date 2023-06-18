@@ -5,9 +5,12 @@ import { Link } from 'react-router-dom';
 
 function LieuDv({ addToFavorites }) {
   const [lieux,setLieux] =useState( [
-    { id: 1, nom: 'Lieu 1', favori: false, region: 'Lieu', color: '#C1DCAB', photo:'./Rectangle 18.png' },
-    { id: 2, nom: 'Lieu 2', favori: false, region: 'Lieu', color: '#88AFDE' },
-    { id: 3, nom: 'Lieu 3', favori: false, region: 'Lieu', color: '#F7A832' },
+    { id: 1, nom: 'Exposition Temporelle', favori: false, region: 'Musé des beaux arts, Alger', color: '#C1DCAB', photo:'./Rectangle 18.png',
+  description:' une grande célebration de la journée nationale de l’independance à Makam El Chahid à Alger, des expositions historiques, des cérémonies ...' },
+    { id: 2, nom: 'Festival d’ornithologie', favori: false, region: 'Lac Tonga, El Taref', color: '#88AFDE',photo:'./Group 774.png',
+    description:' Un grand festival dans lequel se rejoint les plus grands enthusiastses d’ornithologie pour observer les especes d’oiseaux rares au Lac Tonga.' },
+    { id: 3, nom: 'Journée de l’independance', favori: false, region: 'Makam El Chahid, Alger', color: '#F7A832',photo:'./LLL.png',
+    description:' Un grand festival dans lequel se rejoint les plus grands enthusiastses d’ornithologie pour observer les especes d’oiseaux rares au Lac Tonga.' },
   ]);
 
   
@@ -29,7 +32,7 @@ function LieuDv({ addToFavorites }) {
   };
   const [Events, setEvents] = useState([])
 
-  const fetchannonces = async () => {
+  /*onst fetchannonces = async () => {
     const events = await axios.get('http://localhost:8000/api/Event');
        
         console.log(events.data)
@@ -41,18 +44,18 @@ function LieuDv({ addToFavorites }) {
 
     useEffect(() => {
         fetchannonces();
-    }, [])
+    }, [])*/
 
 
   return (
     <>
       <div className='container-DV'>
-        {Events.map((e) => (
+        {lieux.map((e) => (
           <div className='lieu-form-DV' key={e.id}>
-            <img src='./mosq.jpg' alt='photo' />
+            <img src={e.photo} alt='photo' />
             <div className='lieu-form-R-DV'>
               <div className='lieu-name-DV'>
-                <h3>{e.titre}</h3>
+                <h3>{e.nom}</h3>
                 <button className='icon-star' onClick={() =>  toggleFavorite (e.id)}>
                   {e.favori? (
                     <img src='./savedFull.svg' alt='saved' />
@@ -62,7 +65,7 @@ function LieuDv({ addToFavorites }) {
                 </button>
               </div>
               <span style={{ color: e.color, textDecoration: 'underline' }}>{e.date} :</span>
-              <span style={{ color: e.color, textDecoration: 'underline' }}>{e.wilaya} :</span>
+              <span style={{ color: e.color, textDecoration: 'underline' }}>{e.region} :</span>
               <div className='dscp-actl'>
                 <p>
                   <span style={{ color: e.color, paddingTop: '-5px' }}>Details de l’événement: </span>

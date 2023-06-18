@@ -20,7 +20,7 @@ function Comment() {
       const newComment = {
         id: tab.length + 1,
         star: 0, // Set the initial star rating to 0 or any default value
-        name: 'User', // Set the name of the user who posted the comment
+        name: 'serine', // Set the name of the user who posted the comment
         text: commentText.trim(),
       };
       setTab([...tab, newComment]);

@@ -17,6 +17,7 @@ import Lieu from './containers/PageLieux/page_lieu'
 import Main from './containers/Main';
 import Search from './containers/Search'
 import Statistic from './containers/admin/Statistic';
+import Event from './containers/admin/Event';
 
 function App() {
   const [favorites, setFavorites] = useState([]);
@@ -43,10 +44,11 @@ function App() {
         <Route path="/Dashboard" element={<Dashboard/>} />
         <Route path="/ZdestinationList" element={<ZdestinationList/>} />
         <Route path="/ListUsers" element={<ListUsers/>} />
-        <Route path="/Lieu/:id" element={<Lieu/>} />
+        <Route path="/Search/Lieu/:id" element={<Lieu/>} />
         <Route path="/" element={<Main/>} />
         <Route path="/search" element={<Search/>} />
         <Route path="/Statistic" element={<Statistic/>} />
+        <Route path="/Event" element={<Event/>} />
        
       
      
